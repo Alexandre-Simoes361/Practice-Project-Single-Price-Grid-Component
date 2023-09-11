@@ -1,0 +1,231 @@
+:root{
+    --clr-primary-200: hsl(179, 62%, 43%);
+    --clr-primary-400: hsl(71, 73%, 54%);
+    --clr-primary-600: hsl(179, 47%, 54%);
+    --clr-primary-800: hsla(0, 0%, 37%, 0.642);
+
+    --clr-neutral-200: hsl(204, 43%, 93%);
+    --clr-neutral-400: hsl(218, 22%, 67%);
+    --clr-neutral-600: hsla(203, 44%, 93%, 0.623);
+    --clr-neutral-800: hsl(0, 0%, 100%);
+
+    --fw--regular: 400;
+    --fw--bold: 700;
+
+    --fs--p: .65rem;
+    --fs--headings: 1rem;
+    --fs--signup: .75rem;
+    --fs--subheadings: .9rem;
+    --fs--emphasis: 1.6rem;
+    --fs--button: .8rem;
+    --fs--firstsubh: .75rem;
+}
+
+*{
+    box-sizing: border-box;
+    word-break: break-word;
+    text-decoration: none;
+}
+
+h1{
+    font-weight: var(--fw--bold);
+    font-size: var(--fs--headings);
+}
+
+h2{
+    font-weight: var(--fw--bold);
+    font-size: var(--fs--subheadings);
+}
+
+p{
+    font-weight: var(--fw--regular);
+    font-size: var(--fs--p);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    min-width: 100svw;
+    margin: 0rem;
+    background-color: var(--clr-neutral-400);
+    text-align: left;
+    font-family: "Karla";
+    font-weight: var(--fw--regular);
+    color: var(--clr-neutral-200);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    max-width: 15.5rem;
+    overflow: hidden;
+    border-radius: .2rem;
+}
+
+.join{
+    background-color: var(--clr-neutral-800);
+    padding: 0rem 1.1rem 0rem 1.3rem;
+}
+
+.join > h1{
+    margin: 1.3rem 0rem 1rem;
+    color: var(--clr-primary-200);
+}
+
+.join > h2{
+    margin-bottom: 1rem;
+    font-size: var(--fs--firstsubh);
+    color: var(--clr-primary-400);
+}
+
+.join > p{
+    margin-bottom: 1.5rem;
+    color: var(--clr-primary-800);
+    line-height: 1.3rem;
+}
+
+.sign_up{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-primary-200);
+    padding: 0rem 1.3rem;
+}
+
+.sign_up > h2{
+    margin: 1.3rem 0rem .7rem;
+}
+
+.sign_up > p{
+    font-size: var(--fs--signup);
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+    color: var(--clr-neutral-600);
+    margin-bottom: -0.5rem;
+}
+
+.price > p{
+    font-size: var(--fs--signup);
+}
+
+strong{
+    font-size: var(--fs--emphasis);
+    color: var(--clr-neutral-200);
+}
+
+.flexer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 13rem;
+    background-color: var(--clr-primary-400);
+    margin: .7rem 0rem 1.2rem;
+    border-radius: .3rem;
+    filter: drop-shadow(0rem .5rem .2rem rgba(0, 0, 0, 0.058));
+}
+
+a{
+    color: inherit;
+    font-size: var(--fs--button);
+    font-weight: var(--fw--bold);
+    margin: .65rem 0rem .65rem;
+}
+
+.pitch{
+    background-color: var(--clr-primary-600);
+    padding: 0rem 1.3rem;
+}
+
+.pitch > h2{
+    margin: 1.3rem 0rem 1rem 0rem;
+}
+
+.pitch > p{
+    margin-bottom: 1.1rem;
+    color: var(--clr-neutral-600);
+    line-height: 1rem;
+}
+
+@media (min-width: 44.1rem){
+    :root{
+        --fs--p: .78rem;
+        --fs--headings: 1.2rem;
+        --fs--signup: .8rem;
+        --fs--firstsubh: .9rem;
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card{
+        display: grid;
+        max-width: 33rem;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        border-radius: .4rem;
+    }
+
+    .join{
+        grid-column: auto / span 2;
+        grid-row: 1;
+        padding: 0rem 3rem 0rem 2rem;
+    }
+
+    .join > h1{
+        margin: 2rem 0rem 1.5rem;
+    }
+
+    .join > p{
+        margin: -0.5rem 0rem 2rem;
+    }
+
+    .sign_up{
+        grid-column: 1;
+        grid-row: 2;
+        padding: 0rem 0rem 0rem 2rem;
+        margin: 0rem -11rem 0rem 0rem;
+    }
+
+    .sign_up > h2{
+        padding: .5rem 0rem 0rem;
+    }
+
+    .pitch{
+        grid-column: 2;
+        grid-row: 2;
+        padding: 0rem 0rem 0rem 2rem;
+        margin-bottom: 0rem;
+    }
+
+    .pitch > h2{
+        padding: .5rem 0rem 0rem;
+    }
+    
+    .flexer{
+        align-items: left;
+        justify-content: left;
+    }
+
+    .button{
+        width: 12rem;
+        margin-bottom: 2rem;
+    }
+}
